@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_beginner/pages/A/a_page.dart';
 
+///Anonymous Routing
 void main() {
   runApp(const MyApp());
 }
