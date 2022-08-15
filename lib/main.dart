@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_beginner/pages/A/a_page.dart';
+import 'package:flutter_beginner/pages/B/b_page.dart';
+import 'package:flutter_beginner/pages/C/c_page.dart';
 
-///Anonymous Routing
+///Named Routing
 void main() {
   runApp(const MyApp());
 }
@@ -15,7 +17,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const APage(),
+      routes: {
+        '/a': (context) => const APage(),
+        '/b': (context) => const BPage(),
+        '/c': (context) => const CPage(),
+      },
+      initialRoute: '/a',
     );
   }
 }

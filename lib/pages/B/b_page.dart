@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_beginner/pages/C/c_page.dart';
 
 class BPage extends StatefulWidget {
   const BPage({super.key});
@@ -22,8 +20,7 @@ class _BPageState extends State<BPage> {
       ),
       floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
-            Navigator.push(context,
-                CupertinoPageRoute(builder: (context) => const CPage()));
+            Navigator.of(context).pushNamed('/c');
           },
           label: const Text('C Page')),
     );
