@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_beginner/router/my_router.dart';
 
-///Named Routing
+///Generated Routing
 void main() {
   runApp(const MyApp());
 }
