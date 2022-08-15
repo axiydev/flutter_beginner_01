@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_beginner/pages/A/a_page.dart';
-import 'package:flutter_beginner/pages/B/b_page.dart';
-import 'package:flutter_beginner/pages/C/c_page.dart';
+import 'package:flutter_beginner/router/my_router.dart';
 
 ///Named Routing
 void main() {
@@ -17,12 +15,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routes: {
-        '/a': (context) => const APage(),
-        '/b': (context) => const BPage(),
-        '/c': (context) => const CPage(),
-      },
-      initialRoute: '/a',
+      onUnknownRoute: (settings) => MyRouter.onUnknownError(settings),
+      onGenerateRoute: (settings) => MyRouter.onGenerateRoute(settings),
+      initialRoute: MyRouter.initialRoute,
     );
   }
 }
