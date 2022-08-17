@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_beginner/pages/B/b_page.dart';
+import 'package:flutter_beginner/pages/widget/custom_page_route.dart';
 
 class APage extends StatefulWidget {
   const APage({super.key});
@@ -21,8 +22,7 @@ class _APageState extends State<APage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => const BPage()));
+          Navigator.push(context, CustomAnimationRoute(child: const BPage()));
         },
         child: const Text('B'),
       ),

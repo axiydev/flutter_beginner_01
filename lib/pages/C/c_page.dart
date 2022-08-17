@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_beginner/pages/D/d_page.dart';
+import 'package:flutter_beginner/pages/widget/custom_size_router.dart';
 
 class CPage extends StatefulWidget {
   const CPage({super.key});
@@ -17,6 +19,12 @@ class _CPageState extends State<CPage> {
           'C Page',
           style: Theme.of(context).textTheme.headline1,
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).push(CustomSizeRouter(child: const DPage()));
+        },
+        child: const Text('D'),
       ),
     );
   }
